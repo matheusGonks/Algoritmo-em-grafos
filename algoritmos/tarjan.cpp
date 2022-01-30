@@ -1,9 +1,3 @@
-//algoritmo de tarjan que eu nao faco ideia do porque, mas funciona mais ou menos bem
-//Tem um problema com os vetores resultntes de tempoDescoberta e pai (testem ai pra ver), no final da execucao 
-//quase sempre no primeiro vertice; ainda sim o algoritmo faz o que tem que fazer que eh
-//identificar quais arestas sao pontes no grafo,( pelo menos eh o que aconteceu com os 4 testes que eu fiz)
-//baseei quase tudo no codigo que o professor deu
-
 #include <iostream>
 #include <vector>
 #include <limits>
@@ -50,7 +44,7 @@ void Grafo::addAresta(int u, int v){
 }
 
 void Grafo::tarjan(int u){ 
-    low[u] = tempoDescoberta[u] = tempo++;
+    low[u] = tempoDescoberta[u] = ++tempo;
  
     vector<int>::iterator it;
     for(it = listaAdj[u].begin(); it != listaAdj[u].end(); it++){
