@@ -1,9 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <limits>
 using namespace std;
-
-#define INFINITO numeric_limits<int>::max();
 
 class Grafo{
     private:
