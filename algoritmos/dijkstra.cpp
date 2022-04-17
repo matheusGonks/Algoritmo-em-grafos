@@ -69,24 +69,18 @@ class Grafo{
 
 int main(){
     // create the graph given in above figure
-    int V = 9;
+    int V; cin >> V;
     Grafo g(V);
   
     //  making above shown graph
-    g.adicionarAresta(0, 1, 4);
-    g.adicionarAresta(0, 7, 8);
-    g.adicionarAresta(1, 2, 8);
-    g.adicionarAresta(1, 7, 11);
-    g.adicionarAresta(2, 3, 7);
-    g.adicionarAresta(2, 8, 2);
-    g.adicionarAresta(2, 5, 4);
-    g.adicionarAresta(3, 4, 9);
-    g.adicionarAresta(3, 5, 14);
-    g.adicionarAresta(4, 5, 10);
-    g.adicionarAresta(5, 6, 2);
-    g.adicionarAresta(6, 7, 1);
-    g.adicionarAresta(6, 8, 6);
-    g.adicionarAresta(7, 8, 7);
+    while(V != 0){
+        int u, v, peso; 
+        cin >> u >> v >> peso;
+        g.adicionarAresta(u, v, peso);
+
+        V--;    
+    }
+    
   
     g.aplicaDijkstra(0);
   
